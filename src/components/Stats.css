@@ -1,0 +1,43 @@
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr));
+  gap: 1.15rem;
+  margin-top: 1.25rem;
+}
+
+.stat {
+  position: relative;
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  border: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: 16px;
+  padding: 1.6rem 1.4rem;
+  transform: rotate(var(--rot, 0deg));
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.stat:hover {
+  transform: rotate(0deg) translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 18px 30px -18px rgba(32, 27, 51, 0.4);
+}
+
+.stat b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2rem, 3.6vw, 2.6rem);
+  color: var(--ink);
+  line-height: 1;
+}
+
+.stat span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}

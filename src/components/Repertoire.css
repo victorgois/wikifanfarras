@@ -1,0 +1,52 @@
+.setlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.setlist li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1.25rem;
+  padding-block: 1.2rem;
+  border-top: 1px solid var(--line);
+  align-items: baseline;
+  position: relative;
+}
+
+.setlist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 3px;
+  background: var(--dot);
+  border-radius: 0 0 2px 2px;
+}
+
+.setlist li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.track {
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  padding-top: 0.4rem;
+}
+
+.setlist p {
+  color: var(--ink-soft);
+}
+
+.setlist strong {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1.08rem;
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: var(--font-display);
+}

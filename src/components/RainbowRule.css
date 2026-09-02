@@ -1,0 +1,19 @@
+.rainbow-rule {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1.9rem, 1fr));
+  grid-auto-rows: 1.9rem;
+  height: 1.9rem;
+  overflow: hidden;
+}
+
+.rainbow-rule span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.rainbow-rule svg {
+  width: 78%;
+  height: 78%;
+}
