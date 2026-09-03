@@ -1,5 +1,5 @@
 import useReveal from '../hooks/useReveal';
-import { PROPOSAL_URL, TALK_URL } from '../data/content';
+import { PROPOSAL_URL, TALK_URL, FORM_URL } from '../data/content';
 import './CtaSection.css';
 
 export default function CtaSection() {
@@ -17,7 +17,10 @@ export default function CtaSection() {
             </p>
           </div>
           <div className="cta-actions">
-            <a className="btn btn-primary" href={PROPOSAL_URL} target="_blank" rel="noopener">
+            <a className="btn btn-primary" href={FORM_URL} target="_blank" rel="noopener">
+              Preencher formulário de participação ↗
+            </a>
+            <a className="btn btn-ghost" href={PROPOSAL_URL} target="_blank" rel="noopener">
               Ver proposta no Meta-Wiki ↗
             </a>
             <a className="btn btn-ghost" href={TALK_URL} target="_blank" rel="noopener">

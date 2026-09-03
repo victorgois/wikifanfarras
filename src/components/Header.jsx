@@ -1,4 +1,5 @@
 import logoMark from '../assets/logo-mark.png';
+import { FORM_URL } from '../data/content';
 import './Header.css';
 
 const LINKS = [
@@ -23,7 +24,7 @@ export default function Header() {
               {l.label}
             </a>
           ))}
-          <a className="nav-cta" href="#participar">
+          <a className="nav-cta" href={FORM_URL} target="_blank" rel="noopener">
             Participar
           </a>
         </nav>

@@ -21,3 +21,44 @@ A paleta (`RAINBOW`, em `src/data/content.js`) foi extraída por amostragem de p
 - `logo-icon.png` — selo com as fitas do surdo, usado na hero.
 
 Tipografia: **Baloo 2** (títulos), **Nunito Sans** (texto corrido), **Space Mono** (datas, números, rótulos).
+
+## Deploy (Toolforge)
+
+O site roda como uma tool estática no [Toolforge](https://toolforge.org), a plataforma de cloud da Wikimedia: **https://wikifanfarras.toolforge.org**
+
+### Pré-requisitos (setup único)
+
+1. Conta de desenvolvedor Wikimedia com acesso ao Toolforge (criar em [wikitech.wikimedia.org](https://wikitech.wikimedia.org/wiki/Special:CreateAccount)).
+2. Chave SSH registrada em [toolsadmin.wikimedia.org](https://toolsadmin.wikimedia.org/profile/settings/ssh-keys/).
+3. Ser maintainer da tool `wikifanfarras` (ver em [toolsadmin](https://toolsadmin.wikimedia.org/tools/id/wikifanfarras)).
+4. Entrada no `~/.ssh/config` local:
+
+   ```
+   Host toolforge
+       HostName login.toolforge.org
+       User <seu_usuario_de_shell_minusculo>
+       IdentityFile ~/.ssh/<sua_chave>
+       IdentitiesOnly yes
+   ```
+
+   ⚠️ O usuário de shell é o nome de usuário do Wikitech **em minúsculas** (ex.: `VGois` → `vgois`), não necessariamente igual ao nome de exibição.
+
+### Publicando uma atualização
+
+```bash
+npm run build
+rsync -avz --delete dist/ toolforge:/data/project/wikifanfarras/public_html/
+```
+
+O webservice (`php7.4`, backend Kubernetes — serve `public_html` como conteúdo estático) já fica rodando de forma persistente. Só é preciso reiniciar se ele parar de responder:
+
+```bash
+ssh toolforge 'become wikifanfarras webservice restart'
+```
+
+Outros comandos úteis:
+
+```bash
+ssh toolforge 'become wikifanfarras webservice status'
+ssh toolforge 'become wikifanfarras webservice logs'
+```

@@ -7,7 +7,6 @@ import Gallery from './components/Gallery';
 import Repertoire from './components/Repertoire';
 import Timeline from './components/Timeline';
 import Stats from './components/Stats';
-import Partners from './components/Partners';
 import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 
@@ -29,8 +28,6 @@ export default function App() {
         <Timeline />
         <RainbowRule />
         <Stats />
-        <RainbowRule />
-        <Partners />
         <RainbowRule />
         <CtaSection />
       </main>

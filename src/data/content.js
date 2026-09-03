@@ -53,40 +53,40 @@ export const SETLIST = [
 
 export const TIMELINE = [
   {
-    date: '01–10 SET',
+    date: 'A definir',
     title: 'Mapeamento comunitário e divulgação',
     text: 'Identificação das bandas e primeiro contato com parceiros e comunidade.',
     live: false,
   },
   {
-    date: '13 SET',
+    date: 'A definir',
     tag: 'ONLINE',
     title: 'Oficina de edição online — turma 1',
     text: 'Mão na massa a distância: contas, primeiras edições, upload de mídia e boas práticas.',
     live: true,
   },
   {
-    date: '16 SET',
+    date: 'A definir',
     tag: 'ONLINE',
     title: 'Oficina de edição online — turma 2',
     text: 'Segunda turma remota, para quem não pôde vir na primeira ou quer se aprofundar.',
     live: true,
   },
   {
-    date: '01–26 SET',
+    date: 'A definir',
     title: 'Documentação fotográfica em ensaios',
     text: 'Registro visual das bandas em ação, para alimentar o Commons e os artigos.',
     live: false,
   },
   {
-    date: '27 SET',
+    date: 'A definir',
     tag: 'PRESENCIAL',
     title: 'Oficina presencial de edição — 4 horas',
     text: 'Encontro final cara a cara: fechamento de artigos, itens do Wikidata e uploads pendentes.',
     live: true,
   },
   {
-    date: '30 SET – 30 OUT',
+    date: 'A definir',
     title: 'Relatoria e disseminação',
     text: 'Prestação de contas e compartilhamento dos resultados com a comunidade.',
     live: false,
@@ -131,8 +131,6 @@ export const STATS = [
   { value: '2', label: 'parcerias formalizadas' },
 ];
 
-export const PARTNERS = ['Estagiários Brass Band', 'Sambrass', 'Na Tora Brass Band'];
-
 // Fotos de referência já publicadas no Wikimedia Commons sob licença livre —
 // exemplos do tipo de acervo que a oficina pretende gerar para as fanfarras de BH.
 export const GALLERY = [
@@ -175,6 +173,9 @@ export const PROPOSAL_URL =
 
 export const TALK_URL =
   'https://br.wikimedia.org/wiki/Discuss%C3%A3o:Wiki_Apoia_2026/Propostas/Oficina_de_edi%C3%A7%C3%A3o_da_wikipedia_com_fanfarras_de_carnaval_de_Belo_Horizonte';
+
+export const FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfgFSyfjppJ0i6QeASXYwNas5EflSS0h0zY7w-tdia4gK2pNQ/viewform?usp=publish-editor';
 
 // As três sessões da oficina, em ordem — o Hero conta os dias até a próxima.
 export const WORKSHOPS = [

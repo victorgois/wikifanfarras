@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import logoIcon from '../assets/logo-icon.png';
-import { RAINBOW, PROPOSAL_URL, WORKSHOPS } from '../data/content';
+import { RAINBOW, PROPOSAL_URL, FORM_URL, WORKSHOPS } from '../data/content';
 import './Hero.css';
 
 function nextWorkshop() {
@@ -89,7 +89,7 @@ export default function Hero() {
             <a className="btn btn-primary" href={PROPOSAL_URL} target="_blank" rel="noopener">
               Ler a proposta completa ↗
             </a>
-            <a className="btn btn-ghost" href="#participar">
+            <a className="btn btn-ghost" href={FORM_URL} target="_blank" rel="noopener">
               Como participar
             </a>
           </div>
